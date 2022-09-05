@@ -1,0 +1,229 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+.booking {
+    background-color: burlywood;
+    .container {
+        padding: 0 30%;
+            .booking__header {
+                background-image: url('../img/intro-4.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 400px;
+                width: 100%;               
+                &--content {
+                    padding: 90px;
+                    img {
+                        height: 100px;
+                        width: 100px;
+                        margin: 0 auto;
+                        display: block;
+                        border-radius: 10px;
+                    }
+                    p {
+                        text-align: center;
+                        color: white;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .borderRound {
+                display: block;
+                width: 100%;
+                border-radius: 30px;
+                border: none;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+            .btn {
+                cursor: pointer;
+            }
+            .booking {
+                background-color: rgb(35,31,32);
+                border-radius: 20px;
+                margin-top: -60px;
+                &__form {
+                    padding: 10px 30px;
+                    .booking__form--title {
+                        color: white;
+                        
+                    }
+                    .personalInfo {
+                        input[type="text"], input[type="number"] {
+                            margin-bottom: 10px;
+                            outline: none;
+                            
+                            &::placeholder {
+                                color: rgb(191,191,191);
+                                font-weight: 700;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .brand {
+                        &__place {
+                            padding: 15px;
+                            background-color: white;
+                            margin-bottom: 15px;
+                            label {
+                                font-weight: 700;
+                            }     
+                            .brandChecked {
+                                appearance: none;
+                                height: 20px;
+                                width: 20px;
+                                border: 1px solid black;
+                                border-radius: 50%;
+                                top: 5px;
+                                position: relative;
+                                cursor: pointer;
+                                &:checked::after{
+                                    animation: checkedBtn 0.65s;
+                                    position: absolute;
+                                    content: "";
+                                    height: 15px;
+                                    width: 15px;
+                                    background: black;
+                                    border-radius: 50%;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                }
+                                &:checked::before {
+                                    position: absolute;
+                                    content: "";
+                                    height: 15px;
+                                    width: 15px;
+                                    background: black;
+                                    border-radius: 50%;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                }
+                            }                
+                        }                 
+                    }
+                    .ktv {
+                        margin: 15px 0;
+                        &__label {
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+                        &__name {
+                            display: block;
+                            width: 100%;
+                            padding: 10px;
+                            box-sizing: border-box;
+                            font-size: 18px;
+                            // display: none;
+                        }
+                        #ktv__option2, #ktv__option3 {
+                            display: none;
+                        }
+                    }
+                    .serviceOption {
+                        margin: 15px 0;
+                        &__label {
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+                        &__add {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            &--name {
+                                display: block;
+                                width: 100%;
+                                padding: 10px;
+                                box-sizing: border-box;
+                                font-size: 18px;
+                                margin-bottom: 10px;
+                                margin: 0;
+                                width: 92%;
+                                
+                            }
+                            .removeEle {
+                                color: white;
+                                cursor: pointer;
+                                font-size: 20px;
+                                display: none;
+                            } 
+                            #removeEleHidden {
+                                color: red;
+                                font-size: 20px;
+                                // display: block;
+                                cursor: not-allowed;
+                            }
+                        }
+                        &__more {
+                            #serviceOption__btn {
+                                font-size: 18px;
+                                font-weight: 700;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                    .timeOrder {
+                        input[type="date"] {
+                            padding: 10px;
+                            margin-top: 15px;
+                        }
+                        .timeFrame {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+                            &__ele {
+                                text-decoration: none;
+                                margin-bottom: 10px;
+                                display: inline-block;
+                                padding: 15px;
+                                background-color: white;
+                                border-radius: 10px;
+                                color: black;
+                                font-weight: 700;
+                                width: 23%;
+                                box-sizing: border-box;
+                                text-align: center;
+                            }
+                        
+                        }
+                    }
+                    .note {
+                        margin: 15px 0;
+                        textarea {
+                            width: 100%;
+                            box-sizing: border-box;
+                            margin-bottom: 10px;
+                            outline: none;
+                        }
+                        .note__btn {
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            } 
+    }
+}
+//VALIDATION
+.validSign {
+    color: red;
+    font-weight: 700;
+}
+
+//ANIMATION
+@keyframes checkedBtn {
+    0% {
+        opacity: 0.55;
+        height: 15px;
+        width: 15px;
+    }
+    100% {
+        height: 40px;
+        width: 40px;
+        opacity: 0;
+    }
+}

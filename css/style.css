@@ -1,0 +1,175 @@
+body {
+  box-sizing: border-box;
+  margin: 0; }
+
+.booking {
+  background-color: burlywood; }
+  .booking .container {
+    padding: 0 30%; }
+    .booking .container .booking__header {
+      background-image: url("../img/intro-4.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 400px;
+      width: 100%; }
+      .booking .container .booking__header--content {
+        padding: 90px; }
+        .booking .container .booking__header--content img {
+          height: 100px;
+          width: 100px;
+          margin: 0 auto;
+          display: block;
+          border-radius: 10px; }
+        .booking .container .booking__header--content p {
+          text-align: center;
+          color: white;
+          font-weight: 700; }
+    .booking .container .borderRound {
+      display: block;
+      width: 100%;
+      border-radius: 30px;
+      border: none;
+      padding: 15px;
+      box-sizing: border-box; }
+    .booking .container .btn {
+      cursor: pointer; }
+    .booking .container .booking {
+      background-color: #231f20;
+      border-radius: 20px;
+      margin-top: -60px; }
+      .booking .container .booking__form {
+        padding: 10px 30px; }
+        .booking .container .booking__form .booking__form--title {
+          color: white; }
+        .booking .container .booking__form .personalInfo input[type="text"], .booking .container .booking__form .personalInfo input[type="number"] {
+          margin-bottom: 10px;
+          outline: none; }
+          .booking .container .booking__form .personalInfo input[type="text"]::placeholder, .booking .container .booking__form .personalInfo input[type="number"]::placeholder {
+            color: #bfbfbf;
+            font-weight: 700;
+            font-size: 15px; }
+        .booking .container .booking__form .brand__place {
+          padding: 15px;
+          background-color: white;
+          margin-bottom: 15px; }
+          .booking .container .booking__form .brand__place label {
+            font-weight: 700; }
+          .booking .container .booking__form .brand__place .brandChecked {
+            appearance: none;
+            height: 20px;
+            width: 20px;
+            border: 1px solid black;
+            border-radius: 50%;
+            top: 5px;
+            position: relative;
+            cursor: pointer; }
+            .booking .container .booking__form .brand__place .brandChecked:checked::after {
+              animation: checkedBtn 0.65s;
+              position: absolute;
+              content: "";
+              height: 15px;
+              width: 15px;
+              background: black;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%); }
+            .booking .container .booking__form .brand__place .brandChecked:checked::before {
+              position: absolute;
+              content: "";
+              height: 15px;
+              width: 15px;
+              background: black;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%); }
+        .booking .container .booking__form .ktv {
+          margin: 15px 0; }
+          .booking .container .booking__form .ktv__label {
+            display: block;
+            margin-bottom: 10px; }
+          .booking .container .booking__form .ktv__name {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 18px; }
+          .booking .container .booking__form .ktv #ktv__option2, .booking .container .booking__form .ktv #ktv__option3 {
+            display: none; }
+        .booking .container .booking__form .serviceOption {
+          margin: 15px 0; }
+          .booking .container .booking__form .serviceOption__label {
+            display: block;
+            margin-bottom: 10px; }
+          .booking .container .booking__form .serviceOption__add {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px; }
+            .booking .container .booking__form .serviceOption__add--name {
+              display: block;
+              width: 100%;
+              padding: 10px;
+              box-sizing: border-box;
+              font-size: 18px;
+              margin-bottom: 10px;
+              margin: 0;
+              width: 92%; }
+            .booking .container .booking__form .serviceOption__add .removeEle {
+              color: white;
+              cursor: pointer;
+              font-size: 20px;
+              display: none; }
+            .booking .container .booking__form .serviceOption__add #removeEleHidden {
+              color: red;
+              font-size: 20px;
+              cursor: not-allowed; }
+          .booking .container .booking__form .serviceOption__more #serviceOption__btn {
+            font-size: 18px;
+            font-weight: 700;
+            padding: 10px; }
+        .booking .container .booking__form .timeOrder input[type="date"] {
+          padding: 10px;
+          margin-top: 15px; }
+        .booking .container .booking__form .timeOrder .timeFrame {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around; }
+          .booking .container .booking__form .timeOrder .timeFrame__ele {
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            color: black;
+            font-weight: 700;
+            width: 23%;
+            box-sizing: border-box;
+            text-align: center; }
+        .booking .container .booking__form .note {
+          margin: 15px 0; }
+          .booking .container .booking__form .note textarea {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            outline: none; }
+          .booking .container .booking__form .note .note__btn {
+            font-size: 18px;
+            font-weight: 700; }
+
+.validSign {
+  color: red;
+  font-weight: 700; }
+
+@keyframes checkedBtn {
+  0% {
+    opacity: 0.55;
+    height: 15px;
+    width: 15px; }
+  100% {
+    height: 40px;
+    width: 40px;
+    opacity: 0; } }
